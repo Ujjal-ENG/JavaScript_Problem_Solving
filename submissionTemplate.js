@@ -26,26 +26,14 @@ function readline() {
 // ********** Code Start **********
 
 function main() {
-  let number = Number(readline("Enter the number: "));
 
-  let al = 0;
-  let gas = 0;
-  let de = 0;
-  while (number >= 0) {
-    number = Number(readline("Enter the number: "));
-    if (number === 4) {
-      break;
-    } else if (number === 1) {
-      al = al + 1;
-    } else if (number === 2) {
-      gas = gas + 1;
-    } else if (number === 3) {
-      de = de + 1;
-    } else {
+  let num1 = Number(readline("Enter number 1: "));
+  let num2 = Number(readline("Enter number 2: "));
+  let sum = 0;
+  for (let i = num1; i <= num2; i++) {
+    if (i % 13 !== 0) {
+      sum += i;
     }
   }
-  print("MUITO OBRIGADO");
-  print(`Alcool: ${al}`);
-  print(`Gasolina: ${gas}`);
-  print(`Diesel: ${de}`);
+  print(sum);
 }
