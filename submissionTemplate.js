@@ -26,14 +26,22 @@ function readline() {
 // ********** Code Start **********
 
 function main() {
+  let myinputarr = [];
+  let size = Number(readline("Enter the arrar SIze: "));
 
-  let num1 = Number(readline("Enter number 1: "));
-  let num2 = Number(readline("Enter number 2: "));
-  let sum = 0;
-  for (let i = num1; i <= num2; i++) {
-    if (i % 13 !== 0) {
-      sum += i;
-    }
+  for (var a = 0; a < size; a++) {
+    myinputarr[a] = Number(readline("Enter array Element " + (a + 1)));
   }
-  print(sum);
+  const evenArray = myinputarr.filter((arrs) => {
+    console.log("\n");
+
+    return arrs % 2 === 0;
+  });
+  evenArray.sort((a, b) => a - b);
+  const oddArray = myinputarr.filter((arrs) => {
+    console.log("\n");
+    return arrs % 2 !== 0;
+  });
+  oddArray.sort((a, b) => b - a);
+  print(`${evenArray},${oddArray}`);
 }
