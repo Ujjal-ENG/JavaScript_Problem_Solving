@@ -26,22 +26,23 @@ function readline() {
 // ********** Code Start **********
 
 function main() {
-  let myinputarr = [];
-  let size = Number(readline("Enter the arrar SIze: "));
+  let size = Number(readline("Enter the Size of the loop"));
 
-  for (var a = 0; a < size; a++) {
-    myinputarr[a] = Number(readline("Enter array Element " + (a + 1)));
+  let i = 0;
+  const subject = [];
+  while (i < size) {
+    let array = readline(`Enter the subject ${i + 1}: `);
+    i = i + 1;
+    subject.push(array);
   }
-  const evenArray = myinputarr.filter((arrs) => {
-    console.log("\n");
 
-    return arrs % 2 === 0;
-  });
-  evenArray.sort((a, b) => a - b);
-  const oddArray = myinputarr.filter((arrs) => {
-    console.log("\n");
-    return arrs % 2 !== 0;
-  });
-  oddArray.sort((a, b) => b - a);
-  print(`${evenArray},${oddArray}`);
+  for (let i = 0; i < subject.length; i++) {
+    if (subject[i] === "Ciencia da Computacao") {
+      print("Ciencia da Computacao" + "\n");
+      break;
+    } else {
+      print("Ciencia da Computacao" + "\n");
+      break;
+    }
+  }
 }
