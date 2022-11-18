@@ -26,8 +26,14 @@ function readline() {
 // ********** Code Start **********
 
 function main() {
-  let x = Number(readline("Enter the Size of the item"));
-  for (let i = 0; i < 1000; i++) {
-    print(`N[${i}] = ${i % x}`);
+  let x = parseFloat(readline("Enter the number: ")).toFixed(4);
+  for (let i = 0; i < 100; i++) {
+    if (i === 0) {
+      print(`N[${i}] = ${x}`);
+    } else {
+      let div = x / 2;
+      print(`N[${i}] = ${div.toFixed(4)}`);
+      x = div;
+    }
   }
 }
