@@ -26,23 +26,8 @@ function readline() {
 // ********** Code Start **********
 
 function main() {
-  let size = Number(readline("Enter the Size of the loop"));
-
-  let i = 0;
-  const subject = [];
-  while (i < size) {
-    let array = readline(`Enter the subject ${i + 1}: `);
-    i = i + 1;
-    subject.push(array);
-  }
-
-  for (let i = 0; i < subject.length; i++) {
-    if (subject[i] === "Ciencia da Computacao") {
-      print("Ciencia da Computacao" + "\n");
-      break;
-    } else {
-      print("Ciencia da Computacao" + "\n");
-      break;
-    }
+  let x = Number(readline("Enter the Size of the item"));
+  for (let i = 0; i < 1000; i++) {
+    print(`N[${i}] = ${i % x}`);
   }
 }
