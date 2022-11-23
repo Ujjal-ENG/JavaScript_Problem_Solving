@@ -1,0 +1,1 @@
+console.log(isHappy(19));

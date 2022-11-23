@@ -3,9 +3,10 @@ var areAlmostEqual = function(s1, s2) {
       console.log(true)
   }
   else {
-    console.log(false);
-    
+    for (let i = 0; i < s2.length; i++){
+      console.log(s2[i])
+    }
   }
 };
 
-areAlmostEqual("bank", "bank")
+areAlmostEqual("bank", "kanb")
