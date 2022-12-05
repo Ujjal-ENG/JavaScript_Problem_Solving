@@ -1,1 +1,1 @@
-Array2d[i][j]
+zeroItem + otherNum
