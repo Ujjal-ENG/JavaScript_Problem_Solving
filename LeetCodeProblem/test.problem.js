@@ -1,14 +1,6 @@
 var singleNumber = function (nums) {
-  const ht = {};
-  for (let num of nums) {
-    console.log(num);
-    console.log((ht[num] = ht[num] + 1 || 1));
-  }
-  console.log(ht);
-  for (let key in ht) {
-    if (ht[key] === 1) {
-      console.log(key);
-    }
+  for (let i = 0; i < nums.length; i++) {
+    console.log(i);
   }
 };
-singleNumber([4, 2, 2, 1, 1, 1]);
+singleNumber(9669);
