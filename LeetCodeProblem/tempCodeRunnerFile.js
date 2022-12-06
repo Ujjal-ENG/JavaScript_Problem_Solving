@@ -1,1 +1,1 @@
-).join("[.]"
+      console.log(count);
