@@ -1,9 +1,20 @@
 var closeStrings = function (word1, word2) {
   let c1 = word1.length;
   let c2 = word2.length;
+  let s1 = word2.split("").sort().join("");
+  let s2 = word2.split("").sort().join("");
+
   if (c1 === c2) {
-    return true
+    for (let i = 0; i < c1; i++) {
+      for (let j = 0; j < c2; j++) {
+        if (s1[i] === s2[j]) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+    }
   }
-  return false
+  return false;
 };
 closeStrings("abc", "bca");
