@@ -1,13 +1,20 @@
-var isPowerOfTwo = function (n) {
-  let temp = n;
-  let mathPow;
-  for (let i = 0; i < temp; i++) {
-    mathPow = Math.pow(2, i);
-    if (mathPow === n) {
-      return true;
+var isValid = function (s) {
+  const stack = [];
+  const pair = {
+    "[": "]",
+    "{": "}",
+    "(": ")",
+  };
+  const isPaired = (a, b) => pair[a] === b;
+
+  for (c of s) {
+    if (isPaired(stack[stack.length - 1], c)) {
+      stack.pop();
+    } else {
+      stack.push(c);
     }
   }
-  return false
+  return stack.length === 0;
 };
 
-console.log(isPowerOfTwo(3));
+console.log(isValid("(){}}{"));
