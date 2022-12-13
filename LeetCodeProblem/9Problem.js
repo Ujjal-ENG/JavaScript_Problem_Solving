@@ -1,10 +1,10 @@
 var isPalindrome = function (x) {
-  var myArr = String(x)
-    .split("")
-    .map((num) => {
-      return Number(num);
-    });
+  let str = x + "";
+  var splitString = str.split("");
+  var reverseArray = splitString.reverse();
 
+  var joinArray = reverseArray.join("");
 
+  return joinArray === str;
 };
-console.log(isPalindrome(103));
+console.log(isPalindrome(-121));
