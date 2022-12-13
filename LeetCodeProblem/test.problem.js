@@ -1,20 +1,10 @@
-var isValid = function (s) {
-  const stack = [];
-  const pair = {
-    "[": "]",
-    "{": "}",
-    "(": ")",
-  };
-  const isPaired = (a, b) => pair[a] === b;
+var isPalindrome = function (x) {
+  let str = x + "";
+  var splitString = str.split("");
+  var reverseArray = splitString.reverse();
 
-  for (c of s) {
-    if (isPaired(stack[stack.length - 1], c)) {
-      stack.pop();
-    } else {
-      stack.push(c);
-    }
-  }
-  return stack.length === 0;
+  var joinArray = reverseArray.join("");
+
+  return joinArray === str;
 };
-
-console.log(isValid("(){}}{"));
+console.log(isPalindrome(-121));
