@@ -1,10 +1,19 @@
-var isPalindrome = function (x) {
-  let str = x + "";
-  var splitString = str.split("");
-  var reverseArray = splitString.reverse();
-
-  var joinArray = reverseArray.join("");
-
-  return joinArray === str;
+const checkBrac = (s) => {
+  let store = [];
+  store = s;
+  for (let i = 0; i < store.length; i++) {
+    if (
+      store[i] === "(" ||
+      store[i] === ")" ||
+      store[i] === "{" ||
+      store[i] === "}" ||
+      store[i] === "[" ||
+      store[i] === "]"
+    ) {
+     return true
+    }
+    return false
+  }
 };
-console.log(isPalindrome(-121));
+
+console.log(checkBrac("a+(b*c)-2-a"));
