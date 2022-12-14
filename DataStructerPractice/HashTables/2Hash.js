@@ -1,19 +1,19 @@
 class Solution {
   getPairsCount(arr, k) {
-    const comArray = arr.concat(k)
     const ht = {};
-    for (let i in comArray) {
-      ht[comArray[i]] = ht[[i]]
+    for (let i in arr) {
+      ht[arr[i]] = true;
     }
 
-    for (let i in ht) {
-      console.log(i)
+    for (let j in k) {
+      if (ht[k[j]]) {
+        console.log("true");
+      }
+      console.log("false");
     }
-    
   }
-
 }
 
 const sol = new Solution();
 
-sol.getPairsCount([1, 5, 7, 1], [1,2,3]);
+sol.getPairsCount([1, 5, 7, 1], [1, 2, 3]);
