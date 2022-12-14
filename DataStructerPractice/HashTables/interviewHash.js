@@ -12,10 +12,10 @@ const firstRecurr = (arrays) => {
   let ht = {};
 
   for (let i in arrays) {
-    if (ht[arrays[i]] !== undefined) {
+    if (ht[arrays[i]]) {
       return arrays[i];
     } else {
-      ht[arrays[i]] = i;
+      ht[arrays[i]] = true;
     }
     console.log(ht)
   }
