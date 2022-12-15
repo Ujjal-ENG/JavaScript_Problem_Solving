@@ -37,4 +37,5 @@ myLinkedList.append(5);
 myLinkedList.append(16);
 myLinkedList.append(18);
 myLinkedList.prepend(1);
+myLinkedList.prepend(35);
 console.log(myLinkedList);
