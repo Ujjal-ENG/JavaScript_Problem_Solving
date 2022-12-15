@@ -32,6 +32,11 @@ class LinkedList {
   }
 
   insert(index, value) {
+    //check params
+    if (index >= this.length) {
+      return this.append(value);   
+    }
+    const newNode = new Node(value)
     
   }
 
@@ -52,5 +57,5 @@ myLinkedList.append(16);
 myLinkedList.append(18);
 myLinkedList.prepend(1);
 myLinkedList.prepend(35);
-myLinkedList.insert(2, 99);
+myLinkedList.insert(99, 99);
 console.log(myLinkedList);
