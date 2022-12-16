@@ -47,6 +47,15 @@ class LinkedList {
     return this.printList;
   }
 
+  remove(index) {
+    //check the params
+    const leader = this.traverseToIndex(index - 1)
+    const unwantedNode = leader.next;
+    leader.next = unwantedNode.next;
+    this.length--;
+    return this
+  }
+
   traverseToIndex(index) {
     //check params
     let counter = 0;
@@ -75,5 +84,6 @@ myLinkedList.append(16);
 myLinkedList.append(18);
 myLinkedList.prepend(1);
 myLinkedList.insert(1, 99);
+myLinkedList.remove(1);
 myLinkedList.printList();
 console.log(myLinkedList);
