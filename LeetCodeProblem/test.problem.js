@@ -1,19 +1,14 @@
-const checkBrac = (s) => {
-  let store = [];
-  store = s;
-  for (let i = 0; i < store.length; i++) {
-    if (
-      store[i] === "(" ||
-      store[i] === ")" ||
-      store[i] === "{" ||
-      store[i] === "}" ||
-      store[i] === "[" ||
-      store[i] === "]"
-    ) {
-     return true
+var searchInsert = function (nums, target) {
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] === target) {
+      return i;
     }
-    return false
+    let temp = target;
+    if (nums[i] > temp) {
+      nums[i] = temp;
+      return i;
+    }
   }
 };
 
-console.log(checkBrac("a+(b*c)-2-a"));
+console.log(searchInsert([1, 3, 5, 7], 6));
