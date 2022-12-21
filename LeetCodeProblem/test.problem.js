@@ -1,7 +1,11 @@
-var removeDuplicates = function (nums) {
-  let newArr = nums;
-  newArr = [...new Set(nums)];
-  return newArr
+var maximumWealth = function (accounts) {
+  return Math.max(
+    ...accounts.map((account) => account.reduce((prev, curr) => prev + curr), 0)
+  );
 };
-
-console.log(removeDuplicates([0, 0, 1, 1, 1, 2, 2, 3, 3, 4]));
+console.log(
+  maximumWealth([
+    [1, 2, 3],
+    [3, 2, 1],
+  ])
+);
