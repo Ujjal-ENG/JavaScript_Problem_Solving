@@ -1,16 +1,7 @@
-var removeElement = function (nums, val) {
-  for (let i = 0; i < nums.length; i++) {
-    if (nums[i] === val) {
-      nums[i] = "_";
-    }
-  }
-  nums.sort();
-
-  for (let i = 0; i < nums.length; i++) {
-    nums.pop("_")
-  }
-
-  return nums;
+var removeDuplicates = function (nums) {
+  let newArr = nums;
+  newArr = [...new Set(nums)];
+  return newArr
 };
 
-console.log(removeElement([3, 2, 2, 3], 3));
+console.log(removeDuplicates([0, 0, 1, 1, 1, 2, 2, 3, 3, 4]));
