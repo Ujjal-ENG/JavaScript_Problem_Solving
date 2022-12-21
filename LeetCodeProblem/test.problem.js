@@ -1,19 +1,16 @@
-var searchInsert = function (nums, target) {
-  let array = nums;
-  for (let i = 0; i < array.length; i++) {
-    if (array[i] === target) {
-      return i;
-    }
-    let temp = target;
-    if (array[i] > temp) {
-      array[i] = temp;
-      return i;
-    }
-    if (array[array.length - 1] < temp) {
-      array[array.length] = target;
+var removeElement = function (nums, val) {
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] === val) {
+      nums[i] = "_";
     }
   }
-  return array;
+  nums.sort();
+
+  for (let i = 0; i < nums.length; i++) {
+    nums.pop("_")
+  }
+
+  return nums;
 };
 
-console.log(searchInsert([1, 3, 5, 7], 6));
+console.log(removeElement([3, 2, 2, 3], 3));
