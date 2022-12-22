@@ -1,11 +1,6 @@
-var mergeKLists = function (list) {
-  let takeArray = list.flat().sort((a, b) => a - b);
-  return takeArray;
+var strStr = function (haystack, needle) {
+  if(!needle) return 0
+  let newStr = haystack.split(needle);
+  return newStr.length > 1 ? newStr[0].length : -1;
 };
-console.log(
-  mergeKLists([
-    [1, 4, 5],
-    [1, 3, 4],
-    [2, 6],
-  ])
-);
+console.log(strStr("sadbutsad", "sad"));

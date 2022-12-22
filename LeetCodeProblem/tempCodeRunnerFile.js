@@ -1,1 +1,1 @@
-console.log(newStr);
+ns
