@@ -1,13 +1,12 @@
-var digitCount = function (nums) {
-  const ht = {};
-  for (let i of nums) {
-    ht[i] = ht[i] + 1 || 1;
+var findMedianSortedArrays = function (nums1, nums2) {
+  let newArr = [...nums1, ...nums2].sort((a, b) => a - b);
+  console.log(newArr);
+  if (newArr.length % 2 == 0) {
+    let pos = Math.floor(newArr.length / 2);
+    return ((newArr[pos] + newArr[pos - 1]) / 2).toFixed(5);
+  } else {
+    let pos = Math.floor(newArr.length / 2);
+    return newArr[pos].toFixed(5);
   }
-  for (i in ht) {
-    if (ht[0] >=1) {
-      return false;
-    }
-  }
-  return true;
 };
-console.log(digitCount("0"));
+console.log(findMedianSortedArrays([3], [-2, -1]));
