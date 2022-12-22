@@ -1,12 +1,11 @@
-var findMedianSortedArrays = function (nums1, nums2) {
-  let newArr = [...nums1, ...nums2].sort((a, b) => a - b);
-  console.log(newArr);
-  if (newArr.length % 2 == 0) {
-    let pos = Math.floor(newArr.length / 2);
-    return ((newArr[pos] + newArr[pos - 1]) / 2).toFixed(5);
-  } else {
-    let pos = Math.floor(newArr.length / 2);
-    return newArr[pos].toFixed(5);
-  }
+var mergeKLists = function (list) {
+  let takeArray = list.flat().sort((a, b) => a - b);
+  return takeArray;
 };
-console.log(findMedianSortedArrays([3], [-2, -1]));
+console.log(
+  mergeKLists([
+    [1, 4, 5],
+    [1, 3, 4],
+    [2, 6],
+  ])
+);
