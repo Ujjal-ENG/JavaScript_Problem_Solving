@@ -1,15 +1,6 @@
-var plusOne = function (digits) {
-  let arr = digits
-    .toString()
-    .split(",")
-    .join("")
-    .charAt(digits.length - 1);
-  const res = Number(arr) + 1 + "";
-  if (res.length !== 1) {
-    let newNum = parseInt(res);
-    console.log(newNum);
-  } else {
-    console.log("kop");
-  }
+var lengthOfLastWord = function (nums) {
+  let take = nums.trim();
+  let newTake = take.split(" ");
+  return newTake[newTake.length - 1].length;
 };
-console.log(plusOne([9]));
+console.log(lengthOfLastWord("   fly me   to   the moon  "));
