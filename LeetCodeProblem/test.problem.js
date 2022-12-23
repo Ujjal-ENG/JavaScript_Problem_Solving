@@ -1,13 +1,15 @@
-var search = function (nums, target) {
-  let findIdx = [];
-  if (nums.includes(target)) {
-    for (let i = 0; i < nums.length; i++) {
-      if (nums[i] === target) {
-        findIdx.push(i);
-      }
-    }
-    return findIdx;
+var plusOne = function (digits) {
+  let arr = digits
+    .toString()
+    .split(",")
+    .join("")
+    .charAt(digits.length - 1);
+  const res = Number(arr) + 1 + "";
+  if (res.length !== 1) {
+    let newNum = parseInt(res);
+    console.log(newNum);
+  } else {
+    console.log("kop");
   }
-  return [-1, -1];
 };
-console.log(search([5, 7, 7, 8, 8, 10], 6));
+console.log(plusOne([9]));
