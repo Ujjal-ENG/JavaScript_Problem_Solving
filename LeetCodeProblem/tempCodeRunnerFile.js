@@ -1,1 +1,1 @@
-kop
+prev + curr

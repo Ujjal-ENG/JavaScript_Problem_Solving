@@ -1,24 +1,10 @@
-var isIsomorphic = function (s, t) {
-  const ht = {};
-
-  if (s === t) {
-    return true
-  }
-  for (let i of s) {
-    ht[i] = ht[i] + 1 || 1;
-  }
-  for (let j of t) {
-    ht[j] = ht[j] + 1 || 1;
-  }
-  let count = 0;
-  for (let i in ht) {
-    if (ht[i] > 1) {
-      count++;
+var combinationSum = function (candidates, target) {
+  let sum = candidates.reduce((prev, curr) => {
+    if ((prev + curr) === target) {
+      return prev + curr;
     }
-  }
-  if (count === 1) {
-    return false;
-  }
-  return true;
+  }, 0);
+
+  return sum;
 };
-console.log(isIsomorphic("a", "a"));
+console.log(combinationSum([2, 3, 6, 7], 7));
