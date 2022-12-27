@@ -1,12 +1,11 @@
-var missingNumber = function (nums) {
-  nums.sort(function (a, b) {
-    return a - b;
-  });
-  for (let i = 1; i < nums.length; i++) {
-    if (nums[i] !== i) {
-      return i;
+var myAtoi = function (s) {
+  const ht = [];
+  let newS = s.trim();
+  for (let i of newS) {
+    if ((i > 0 && i <= 9) || i === "+" || i === "-" || i === "*" || i === "/") {
+      ht.push(i);
     }
   }
-  return nums.length;
+  return String(ht).split(",").join("");
 };
-console.log(missingNumber([0, 1, 3]));
+console.log(myAtoi("-42"));
