@@ -11,13 +11,14 @@ var firstMissingPositive = function (nums) {
   }
 
   for (let i in ht) {
-    if (ht[i] === undefined) {
-      if (Number(i) === 1) {
-        return 1;
-      }
-    } else {
-      return maxNum + 1;
-    }
+    // if (ht[i] === undefined) {
+    //   if (Number(i) === 1) {
+    //     return 1;
+    //   }
+    // } else {
+    //   return maxNum + 1;
+    // }
   }
+  return ht
 };
-console.log(firstMissingPositive([3,4,-1,1]));
+console.log(firstMissingPositive([3, 4, -1, 1]));
