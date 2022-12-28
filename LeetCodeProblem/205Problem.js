@@ -18,9 +18,9 @@ var isIsomorphic = function (s, t) {
       ht1[letter] = tLetter;
     }
     if (ht1[letter] !== tLetter || ht2[tLetter] !== letter) {
-      // return false;
+      return false;
     }
   }
-  return ht2;
+  return true;
 };
 console.log(isIsomorphic("paper", "title"));
