@@ -1,26 +1,32 @@
-const char_to_int = (c) => {
-  switch (c) {
-    case 1:
-      return "I";
-    case 5:
-      return "V";
-    case 10:
-      return "X";
-    case 50:
-      return "L";
-    case 100:
-      return "C";
-    case 500:
-      return "D";
-    case 1000:
-      return "M";
-    default:
-      return -1;
+var intToRoman = function (num) {
+  let res = "";
+  if (num < 1 || num > 3999) return res;
+  let weight = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
+  let token = [
+    "M",
+    "CM",
+    "D",
+    "CD",
+    "C",
+    "XC",
+    "L",
+    "XL",
+    "X",
+    "IX",
+    "V",
+    "IV",
+    "I",
+  ];
+  let i = 0;
+  while (num > 0) {
+    if (num - weight[i] >= 0) {
+      res += token[i];
+      num -= weight[i];
+    } else {
+      i++;
+    }
   }
+  return res;
 };
 
-const intToRoman = (num) => {
-  
-};
-
-intToRoman(10);
+console.log(intToRoman(58));
