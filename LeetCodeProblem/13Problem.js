@@ -31,10 +31,11 @@ var romanToInt = function (s) {
       if (s.startsWith(key)) {
         sum += obj[key];
         s = s.slice(key.length);
+        console.log("Changes of the S value: ", s,key);
       }
     }
   }
   return sum;
 };
 
-console.log(romanToInt("LVIII"));
+console.log(romanToInt("MCMXCIV"));
