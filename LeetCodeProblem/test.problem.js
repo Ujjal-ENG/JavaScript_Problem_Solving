@@ -1,9 +1,8 @@
-var permute = function (nums) {
-  for (let i = 0; i < nums.length; i++) {
-    for (j = i; j < nums.length; j++) {
-      console.log((nums[[i][j]] = nums[[j][i]]));
-    }
+var fib = function (n) {
+  if (n < 2) {
+    return n;
   }
+  return fib(n - 1) + fib(n - 2);
 };
 
-console.log(permute([1, 2, 3]));
+console.log(fib(3));
