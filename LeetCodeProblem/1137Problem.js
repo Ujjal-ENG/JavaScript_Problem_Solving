@@ -10,7 +10,8 @@ var tribonacci = function (n) {
     t1 = t2;
     t2 = tn;
   }
-  return t2;
+  // return t2;
+  return tribonacci(n - 1) + tribonacci(n - 2) + tribonacci(n - 3);
 };
 
 console.log(tribonacci(25));
