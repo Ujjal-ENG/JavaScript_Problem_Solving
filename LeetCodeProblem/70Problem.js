@@ -1,13 +1,9 @@
 var climbStairs = function (n) {
-  if (n === 2) {
-    return n;
-  } else if (1 + 1 + 1 === n) {
-    return n;
-  } else if (1 + 2 === n) {
-    return n;
-  } else if (2 + 1 === n) {
-    return n;
-  } else {
-    return 1;
+  let arr = [0, 1, 2, 3];
+  for (let i = 4; i <= n; i++) {
+    arr[i] = arr[i - 1] + arr[i - 2];
   }
+  return arr[n];
 };
+
+console.log(climbStairs(4))
