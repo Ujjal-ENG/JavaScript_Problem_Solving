@@ -1,9 +1,1 @@
-  // let i = 0;
-  // while (num > 0) {
-  //   if (num - weight[i] >= 0) {
-  //     res += token[i];
-  //     num -= weight[i];
-  //   } else {
-  //     i++;
-  //   }
-  // }
+return Math.pow(4, 1) ;

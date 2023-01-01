@@ -1,13 +1,9 @@
-var simplifyPath = function (path) {
-  path = path.split("/");
-  let newArray = [];
-  for (let i of path) {
-    if (i == "." || i == "") continue;
-    else if (i == "..") newArray.pop();
-    else newArray.push(i);
+var isPowerOfFour = function (n) {
+  while (n > 1) {
+    n /= 3;
   }
 
-  return "/" + newArray.join("/");
+  return n === 1;
 };
 
-console.log(simplifyPath("/home//foo/"));
+console.log(isPowerOfFour(27));
