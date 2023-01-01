@@ -1,4 +1,4 @@
-var isPowerOfFour = function (n) {
+var isPowerOfThree = function (n) {
   while (n > 1) {
     n /= 3;
   }
@@ -6,4 +6,4 @@ var isPowerOfFour = function (n) {
   return n === 1;
 };
 
-console.log(isPowerOfFour(27));
+console.log(isPowerOfThree(27));
