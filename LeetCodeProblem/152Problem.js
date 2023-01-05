@@ -1,17 +1,18 @@
 var maxProduct = function (nums) {
-  let max = nums[0];
   let prevMax = nums[0];
   let prevMin = nums[0];
+  let result = nums[0];
+  for (let i = 1; i < nums.length; i++) {
+    curMax = Math.max(nums[i] * prevMax, nums[i], nums[i] * prevMin);
 
-  for (let i = 0; i < nums.length; i++) {
-    const option = [nums[i], nums[i] * prevMax, nums[i] * prevMin];
-    console.log(option);
-    prevMax = Math.max(...option);
-    prevMin = Math.min(...option);
+    curMin = Math.min(nums[i] * prevMin, nums[i], nums[i] * prevMax);
 
-    max = Math.max(max, prevMax);
+    prevMax = curMax;
+    prevMin = curMin;
+
+    result = Math.max(curMax, result);
   }
-  return max;
+  return result;
 };
 
 console.log(maxProduct([2, 3, -2, 4]));
