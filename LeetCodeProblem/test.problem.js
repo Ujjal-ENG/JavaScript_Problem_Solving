@@ -1,9 +1,11 @@
-var isPowerOfFour = function (n) {
-  while (n > 1) {
-    n /= 4;
+var reverseWords = function (s) {
+  let newS = s.trim(1).split(" ");
+  let newArr = [];
+  for (let i of newS) {
+    if (i !== "") {
+      newArr.push(i);
+    }
   }
-
-  return n === 1;
+  return newArr.reverse().join(" ");
 };
-
-console.log(isPowerOfFour(27));
+console.log(reverseWords(" the    sky is blue "));
