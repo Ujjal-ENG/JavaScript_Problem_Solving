@@ -1,11 +1,4 @@
-var reverseWords = function (s) {
-  let newS = s.trim(1).split(" ");
-  let newArr = [];
-  for (let i of newS) {
-    if (i !== "") {
-      newArr.push(i);
-    }
-  }
-  return newArr.reverse().join(" ");
+var findMin = function (nums) {
+  return nums.sort().slice(0, 1).join("");
 };
-console.log(reverseWords(" the    sky is blue "));
+console.log(findMin([3, 4, 5, 1, 2]));
