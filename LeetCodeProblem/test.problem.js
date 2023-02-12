@@ -1,21 +1,10 @@
-var longestConsecutive = function (nums) {
-  let newNum = nums.sort((a, b) => a - b);
-
-  newNum = newNum.filter((x, i) => newNum.indexOf(x) === i);
-  let count = 0;
-
+var mostFrequent = function (nums, key) {
   for (let i = 0; i < nums.length; i++) {
-    if (newNum[0] === 0) {
-      if (i === newNum[i]) {
-        count++;
-      }
-    } else {
-      if (i + 1 === newNum[i]) {
-        count++;
-      }
+    if (i === key) {
+      return nums[i];
     }
   }
-
-  return count;
+  return nums[nums.length - 1];
 };
-console.log(longestConsecutive([100, 4, 200, 1, 3, 2]));
+
+console.log(mostFrequent([1, 1000, 2], 1000));
