@@ -46,6 +46,34 @@
 //   return false;
 // }
 
+function same(arr1, arr2) {
+  if (arr1.length !== arr2.length) {
+    return false;
+  }
 
+  const freq1 = {};
 
-console.log(same([2, 1, 3], [9, 1, 4]));
+  const freq2 = {};
+
+  for (let i of arr1) {
+    freq1[i] = freq1[i] || 1;
+  }
+
+  for (let j of arr2) {
+    freq2[j] = freq2[j] || 1;
+  }
+
+  for (let key in freq1) {
+    if (!(key ** 2 in freq2)) {
+      return false;
+    }
+    if (freq2[key ** 2] !== freq1[key]) {
+      return false;
+    }
+  }
+  console.log(freq1);
+  console.log(freq2);
+  return true;
+}
+
+console.log(same([2, 1, 3, 2], [9, 4, 1, 4]));
