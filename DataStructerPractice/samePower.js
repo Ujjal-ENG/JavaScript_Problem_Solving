@@ -76,4 +76,4 @@ function same(arr1, arr2) {
   return true;
 }
 
-console.log(same([2, 1, 3, 2], [9, 4, 1, 4]));
+console.log(same([2, 1, 4, 2], [9, 4, 1, 4]));
