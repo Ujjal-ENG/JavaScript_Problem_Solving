@@ -30,20 +30,22 @@
 //   return true;
 // }
 
-function same(arr1, arr2) {
-  if (arr1.length === arr2.length) {
-    for (let i of arr1) {
-      let currentIndex = arr2.indexOf(i ** 2);
-      if (currentIndex === -1) {
-        return false;
-      }
-      console.log(arr2);
-      arr2.splice(currentIndex, 1);
-    }
-    return true;
-  }
+// function same(arr1, arr2) {
+//   if (arr1.length === arr2.length) {
+//     for (let i of arr1) {
+//       let currentIndex = arr2.indexOf(i ** 2);
+//       if (currentIndex === -1) {
+//         return false;
+//       }
+//       console.log(arr2);
+//       arr2.splice(currentIndex, 1);
+//     }
+//     return true;
+//   }
 
-  return false;
-}
+//   return false;
+// }
+
+
 
 console.log(same([2, 1, 3], [9, 1, 4]));
