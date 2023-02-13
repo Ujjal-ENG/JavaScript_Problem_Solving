@@ -1,1 +1,1 @@
-nums[i], nums[j]
+[i,j][0]
