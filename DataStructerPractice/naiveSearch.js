@@ -30,4 +30,4 @@ function naiveSearch(strings, tarStr) {
   return count;
 }
 
-console.log(naiveSearch("lorlolie loled", "lol"));
+console.log(naiveSearch("bbbbb", "b"));
