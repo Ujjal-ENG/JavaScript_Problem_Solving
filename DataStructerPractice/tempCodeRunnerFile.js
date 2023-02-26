@@ -1,2 +1,2 @@
-
-  }
+list.pop();
+// list.pop();
