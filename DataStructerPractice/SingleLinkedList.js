@@ -24,10 +24,25 @@ class SinglyLinkedList {
     this.length++;
     return this;
   }
+
+  pop() {
+    if (!this.head) return undefined;
+    
+  }
+
+  traverse() {
+    let current = this.head;
+    while (current) {
+      console.log(current.val);
+      current = current.next;
+    }
+  }
 }
 
 let list = new SinglyLinkedList();
 list.push("Hello");
 list.push("Hell");
 list.push("Hl");
+list.pop();
+list.traverse();
 console.log(list);
