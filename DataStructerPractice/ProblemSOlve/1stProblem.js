@@ -26,9 +26,15 @@ class HashTable {
     return hash;
   }
 
-  set(value, key) {
-    
+  set(key, value) {
+    let address = this._hash(key);
+    if (!this.data[address]) {
+      this.data[address] = [];
+      this.data[address].push(key, value);
+    }
   }
+
+  get(key) {}
 }
 
 const myHashTable = new HashTable(50);
