@@ -1,5 +1,8 @@
 var countPrimes = function (n) {
   let primes = new Map();
+  if (n <= 2) {
+    return 0;
+  }
   for (let i = 2; i <= n; i++) {
     primes.set(i, true);
   }
@@ -11,12 +14,13 @@ var countPrimes = function (n) {
     }
   }
   let result = [];
+
   for (let [key, value] of primes) {
     if (value) {
       result.push(key);
     }
   }
-  return result;
+  return result.length;
 };
 
 console.log(countPrimes(10));
