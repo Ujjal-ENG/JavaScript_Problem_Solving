@@ -1,7 +1,22 @@
-var addBinary = function (a, b) {
-  const num1 = Number(parseInt(a, 2).toString(10));
-  const num2 = Number(parseInt(b, 2).toString(10));
-  const res = num1 + num2;
-  return parseInt(res, 10).toString(2);
+var countPrimes = function (n) {
+  let primes = new Map();
+  for (let i = 2; i <= n; i++) {
+    primes.set(i, true);
+  }
+  for (let i = 2; i <= Math.sqrt(n); i++) {
+    if (primes.get(i)) {
+      for (let j = i * i; j <= n; j += i) {
+        primes.set(j, false);
+      }
+    }
+  }
+  let result = [];
+  for (let [key, value] of primes) {
+    if (value) {
+      result.push(key);
+    }
+  }
+  return result;
 };
-console.log(addBinary("11", "1"));
+
+console.log(countPrimes(10));
