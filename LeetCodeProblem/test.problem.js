@@ -1,19 +1,23 @@
-var trailingZeroes = function (n) {
-  let fact = 1;
-  for (let i = 1; i <= n; i++) {
-    fact *= i;
+var maxSubArray = function (nums) {
+  const ht = {};
+  if (nums.length === 1) {
+    return 1;
   }
-  let takenRes = fact + "";
-  let values = [];
-  if (takenRes.includes(0)) {
-    for (let i = 0; i < takenRes.length; i++) {
-      if (takenRes[i] === "0") {
-        values.push(i);
-      }
+  for (let i of nums) {
+    ht[i] = ht[i] + 1 || 1;
+  }
+  let newArray = [];
+  let minArray = [];
+  for (let i in ht) {
+    if (Number(i) > 0) {
+      newArray.push(Number(i));
+    } else {
+      minArray.push(Number(i));
     }
   }
-  console.log(values.lastIndexOf("0"));
-  return 0;
+  newArray.push(Math.max(...minArray));
+  const sum = newArray.reduce((ps, cs) => ps + cs, 0);
+  return sum;
 };
 
-console.log(trailingZeroes(10));
+console.log(maxSubArray([5, 4, -1, 7, 8]));
