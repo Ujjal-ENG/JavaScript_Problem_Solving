@@ -1,7 +1,7 @@
 var maxSubArray = function (nums) {
   const ht = {};
   if (nums.length === 1) {
-    return 1;
+    return nums[0];
   }
   for (let i of nums) {
     ht[i] = ht[i] + 1 || 1;
@@ -16,8 +16,15 @@ var maxSubArray = function (nums) {
     }
   }
   newArray.push(Math.max(...minArray));
-  const sum = newArray.reduce((ps, cs) => ps + cs, 0);
+  console.log(newArray);
+  const sum = newArray.reduce((ps, cs) => {
+    if (ps + cs <= 0) {
+      if (ps > 0) return ps;
+      else return cs;
+    }
+    return ps + cs;
+  }, 0);
   return sum;
 };
 
-console.log(maxSubArray([5, 4, -1, 7, 8]));
+console.log(maxSubArray([-1, 1]));
