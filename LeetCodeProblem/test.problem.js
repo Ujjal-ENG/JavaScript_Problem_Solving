@@ -1,11 +1,2 @@
-var merge = function (nums1, m, nums2, n) {
-  let j = 0;
-  for (let i = 0; i < m + n; i++) {
-    nums1[i] = nums2[j];
-    j++;
-  }
-
-  return nums1.sort((a, b) => a - b);
-};
-
-console.log(merge([0], 0, [1], 1));
+var search = function (nums, target) {};
+console.log(search([-1, 0, 3, 5, 9, 12], 9));
