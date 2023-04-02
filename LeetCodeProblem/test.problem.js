@@ -1,18 +1,11 @@
-var maxSubArray = function (nums) {
-  let maxNumber = nums[0];
-  let temp = 0;
-
-  for (let i = 0; i < nums.length; i++) {
-    temp += nums[i];
-
-    if (temp > maxNumber) {
-      maxNumber = temp;
-    }
-    if (temp < 0) {
-      temp = 0;
-    }
+var merge = function (nums1, m, nums2, n) {
+  let j = 0;
+  for (let i = 0; i < m + n; i++) {
+    nums1[i] = nums2[j];
+    j++;
   }
-  return maxNumber;
+
+  return nums1.sort((a, b) => a - b);
 };
 
-console.log(maxSubArray([8, -19, 5, -4, 20]));
+console.log(merge([0], 0, [1], 1));
