@@ -1,6 +1,12 @@
 function fibonacci(n) {
+  let a = 0, b = 1,c;
   if(n <= 1) return n;
-  return fibonacci(n - 1) + fibonacci(n - 2);
+  for (let i = 0; i < n; i++) {
+    a = b;
+    b = c;
+    c = a + b;
+  }
+  return a;
 }
 
 console.log(fibonacci(15));
