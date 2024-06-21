@@ -1,24 +1,12 @@
-function isPrime(num) {
-    if(typeof num === undefined) return false;
-    if(num <= 1) return false;
-    for(let i = 2; i <= Math.sqrt(num); i++) {
-        if(num % i === 0) return false;
-    }
-    return true;
+function fibonacci(n) {
+  let a=0,b=1;
+  for(let i=0; i<n.length; i++) {
+    let c = a + b;
+    a = b;
+    b = c;
+    console.log(a,b,c);
+  }
 }
 
-function extractNums(nums) {
-    const result = [];
-    for(let i = 0; i < nums.length; i++) {
-       if(isPrime(nums[i])) {
-         result.push(nums[i]+ "is a prime number");
-       }
-       else {
-         result.push(nums[i]+ "is not a prime number");
-       }
-    }
-    return result;
-}
-
-const arrays = [5,7,2,11,3,18,25,24,23]
-console.log(extractNums(arrays));
+const arrays = [1,2,3,4,5];
+console.log(fibonacci(arrays));
