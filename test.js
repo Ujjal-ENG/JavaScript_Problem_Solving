@@ -1,12 +1,10 @@
-function fibonacci(n) {
-  let a = 0, b = 1,c;
-  if(n <= 1) return n;
-  for (let i = 0; i < n; i++) {
-    a = b;
-    b = c;
-    c = a + b;
+function countNumbers(num) {
+  let count=0;
+  while(num !== 0){
+    num = Math.floor(num/10);
+    count++;
   }
-  return a;
+  return count;
 }
 
-console.log(fibonacci(15));
+console.log(countNumbers(1765585));
