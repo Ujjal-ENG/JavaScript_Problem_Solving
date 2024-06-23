@@ -1,10 +1,8 @@
-function countNumbers(num) {
-  let count=0;
-  while(num !== 0){
-    num = Math.floor(num/10);
-    count++;
-  }
-  return count;
+function reverseNumber(nums){
+const reverseNumber = nums.toString().split('').reverse().join('');
+
+return Number(reverseNumber);
+
 }
 
-console.log(countNumbers(1765585));
+console.log(reverseNumber(657843687));
