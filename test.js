@@ -1,4 +1,4 @@
-function reverseNumber(nums){
+function positionInverse(nums){
 const reverseNumber = nums.toString().split('').reverse().join('');
 
 return Number(reverseNumber);
