@@ -1,8 +1,10 @@
 function positionInverse(nums){
-const reverseNumber = nums.toString().split('').reverse().join('');
-
-return Number(reverseNumber);
-
+    let numbers = nums.toString();
+    let resultNum = [];
+    for(let i =0;i<numbers.length;i++){
+        resultNum[i] = numbers[numbers.length - 1 - i];
+    }
+    return resultNum.join('');
 }
 
-console.log(reverseNumber(657843687));
+console.log(positionInverse(657843687));
