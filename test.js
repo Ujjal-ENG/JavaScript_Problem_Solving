@@ -1,12 +1,11 @@
-var rotatedDigits = function(n) {
-    const numberSet = new Set(['2','5','6','9']);
-    let count=0;
-    for(let i=1;i<=n;i++){
-        if(numberSet.has(i.toString())){
-            count++;
+function primeFactorization(n) {
+    let factors = [];
+    for (let i = 2; i <= n; i++) {
+        while (n % i === 0) {
+            factors.push(i);
+            n /= i;
         }
     }
-    return count;
-};
-
-console.log(rotatedDigits(857));
+    return factors;
+}
+console.log(primeFactorization(18)) // output: [2, 3, 3]);
