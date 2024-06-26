@@ -1,14 +1,12 @@
-var differenceOfSums = function(n, m) {
-    let sum1 = 0;
-    let sum2 = 0;
-    for(let i = 1; i <= n; i++) {
-        if(i%m ===0){
-            sum2 += i;
-        }else{
-            sum1 += i;
+var rotatedDigits = function(n) {
+    const numberSet = new Set(['2','5','6','9']);
+    let count=0;
+    for(let i=1;i<=n;i++){
+        if(numberSet.has(i.toString())){
+            count++;
         }
     }
-    return sum1 - sum2;
+    return count;
 };
 
-console.log(differenceOfSums(10,3));
+console.log(rotatedDigits(857));
