@@ -1,9 +1,9 @@
 function primeFactorization(n) {
     let factors = [];
-    for (let i = 2; i <= n; i++) {
-        while (n % i === 0) {
-            factors.push(i);
-            n /= i;
+    for (let div = 2; div <= n; div++) {
+        while (n % div === 0) {
+            factors.push(div);
+            n /= div;
         }
     }
     return factors;
