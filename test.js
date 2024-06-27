@@ -1,11 +1,8 @@
-function primeFactorization(n) {
-    let factors = [];
-    for (let i = 2; i <= n; i++) {
-        while (n % i === 0) {
-            factors.push(i);
-            n /= i;
-        }
-    }
-    return factors;
-}
-console.log(primeFactorization(18)) // output: [2, 3, 3]);
+var sortBy = function(arr, fn) {
+    return arr.sort((a,b)=>fn(a)-fn(b)  );
+};
+
+
+
+// Input: arr = [5, 4, 1, 2, 3], fn = (x) => x
+// Output: [1, 2, 3, 4, 5]
