@@ -1,8 +1,24 @@
-var sortBy = function(arr, fn) {
-    return arr.sort((a,b)=>fn(a)-fn(b)  );
-};
+function setCounter(init){
+  let currentValue = init;
+   return {
+    increment: function(){
+     currentValue = currentValue + 1;
+     return currentValue;
+   },
+   decrement: function(){
+      currentValue = currentValue - 1;
+   return currentValue;
+  },
+  reset: function(){
+    currentValue = init
+    return currentValue;
+  }
+  }
+}
 
-
-
-// Input: arr = [5, 4, 1, 2, 3], fn = (x) => x
-// Output: [1, 2, 3, 4, 5]
+ const count = setCounter(5);
+ console.log(count.increment());
+ console.log(count.reset());
+ console.log(count.decrement());
+ console.log(count.increment());
+ console.log(count.reset());
