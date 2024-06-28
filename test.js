@@ -1,24 +1,9 @@
-function setCounter(init){
-  let currentValue = init;
-   return {
-    increment: function(){
-     currentValue = currentValue + 1;
-     return currentValue;
-   },
-   decrement: function(){
-      currentValue = currentValue - 1;
-   return currentValue;
-  },
-  reset: function(){
-    currentValue = init
-    return currentValue;
-  }
-  }
+function kopaArray(arr,size) {
+  let result  = [];
+ for(let i=0;i<=arr.length;i++) {
+   result.push(arr.slice(size));
+ }
+ return result;
 }
 
- const count = setCounter(5);
- console.log(count.increment());
- console.log(count.reset());
- console.log(count.decrement());
- console.log(count.increment());
- console.log(count.reset());
+console.log(kopaArray([1,2,3,4,5],6));
