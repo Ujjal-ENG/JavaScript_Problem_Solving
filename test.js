@@ -1,9 +1,10 @@
-function kopaArray(arr,size) {
-  let result  = [];
- for(let i=0;i<=arr.length;i++) {
-   result.push(arr.slice(size));
- }
- return result;
+function pattern1(n){
+  for(let col=1; col<=n;col++){
+    for(let row=1;row<=col;row++){
+      console.log('*')
+    }
+    console.log("\n");
+  }
 }
 
-console.log(kopaArray([1,2,3,4,5],6));
+pattern1(5)
