@@ -1,8 +1,10 @@
-function pattern1(n){
-  for (let i = 1; i <= 5; i++) {
-    console.log('*'.repeat(i));
+function convertNumber(number,base){
+  let result = [];
+  while(number>0){
+    result.push(number%base);
+    number = Math.floor(number/base);
   }
-  
+  return result.reverse().join('');
 }
 
-pattern1(5)
+console.log(convertNumber(57,2));
