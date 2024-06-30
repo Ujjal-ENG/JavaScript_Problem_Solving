@@ -1,10 +1,8 @@
 function pattern1(n){
-  for(let col=1; col<=n;col++){
-    for(let row=1;row<=col;row++){
-      console.log('*')
-    }
-    console.log("\n");
+  for (let i = 1; i <= 5; i++) {
+    console.log('*'.repeat(i));
   }
+  
 }
 
 pattern1(5)
