@@ -7,4 +7,4 @@ function convertDtBNumber(number,base){
   return result.reverse().join('');
 }
 
-console.log(convertNumber(111001,10));
+console.log(convertDtBNumber(634,8));
