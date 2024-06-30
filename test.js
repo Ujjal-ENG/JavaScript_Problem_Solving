@@ -1,4 +1,4 @@
-function convertNumber(number,base){
+function convertDtBNumber(number,base){
   let result = [];
   while(number>0){
     result.push(number%base);
@@ -7,4 +7,4 @@ function convertNumber(number,base){
   return result.reverse().join('');
 }
 
-console.log(convertNumber(57,2));
+console.log(convertNumber(111001,10));
