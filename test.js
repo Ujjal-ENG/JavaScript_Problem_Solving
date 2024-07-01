@@ -1,5 +1,10 @@
-var theMaximumAchievableX = function(num, t) {
-    return num+t*2;
-};
+function convertDtBNumber(number,base){
+  let result = [];
+  while(number>0){
+    result.push(number%base);
+    number = Math.floor(number/base);
+  }
+  return result.reverse().join('');
+}
 
-theMaximumAchievableX(5,1);
+console.log(convertDtBNumber(634,8));
