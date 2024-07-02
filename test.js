@@ -1,10 +1,14 @@
-function convertDtBNumber(number,base){
-  let result = [];
-  while(number>0){
-    result.push(number%base);
-    number = Math.floor(number/base);
+function barChartFuntion(arrs){
+  for(let i of arrs){
+    console.log(makeStar(i));
   }
-  return result.reverse().join('');
+}
+function makeStar(num){
+  let star = "";
+  for(let i = 0; i < num; i++){
+    star += "*";
+  }
+  return star;
 }
 
-console.log(convertDtBNumber(634,8));
+barChartFuntion([4,3,2,0,5,3])  
