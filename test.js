@@ -1,11 +1,12 @@
-var scoreOfString = function(s) {
-  let result = 0;
-  for (let i = 0; i < s.length; i++) {
-    if( s.charCodeAt(i) !== NaN && s.charCodeAt(i+1)){
-      result += Math.abs(s.charCodeAt(i) - s.charCodeAt(i+1));
+var addSpaces = function(s, spaces) {
+  let result = [];
+    for (var i = 0; i < s.length; i++){
+      if (spaces.includes(i)){
+        result.push(" ");
+      }
+      result.push(s[i]);
     }
-}
-  return result;
+    return result.join("");
 };
 
-console.log(scoreOfString('hello')); // 57  
+console.log(addSpaces("icodeinpython",  [1,5,7,9]));
