@@ -1,14 +1,10 @@
-function barChartFuntion(arrs){
-  for(let i of arrs){
-    console.log(makeStar(i));
-  }
-}
-function makeStar(num){
-  let star = "";
-  for(let i = 0; i < num; i++){
-    star += "*";
-  }
-  return star;
-}
+var createCounter = function(n) {
+  return function() {
+      return n++;
+  };
+};
 
-barChartFuntion([4,3,2,0,5,3])  
+ const counter = createCounter(10)
+ console.log(counter()) // 10
+ console.log(counter()) // 11
+ console.log(counter()) // 12
