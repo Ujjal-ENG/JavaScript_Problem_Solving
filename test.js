@@ -1,12 +1,13 @@
 var addSpaces = function(s, spaces) {
-  let result = [];
+  let result = "";
+  let spacesSet = new Set(spaces);
     for (var i = 0; i < s.length; i++){
-      if (spaces.includes(i)){
-        result.push(" ");
+      if (spacesSet.has(i)){
+        result += " ";
       }
-      result.push(s[i]);
+      result+=(s[i]);
     }
-    return result.join("");
+    return result;
 };
 
 console.log(addSpaces("icodeinpython",  [1,5,7,9]));
