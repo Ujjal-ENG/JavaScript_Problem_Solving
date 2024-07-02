@@ -8,4 +8,4 @@ var scoreOfString = function(s) {
   return result;
 };
 
-console.log(scoreOfString('hello')); // 57
+console.log(scoreOfString('hello')); // 57  
