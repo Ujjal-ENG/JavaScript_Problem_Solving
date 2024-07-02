@@ -1,22 +1,11 @@
-var createCounter = function(init) {
-  let counter = init;
-    return {
-      increment: function (){
-       counter = counter +1;
-        return counter;
-      },
-      reset: function (){
-        counter = init;
-        return counter;
-      },
-      decrement: function() {
-        counter = counter -1;
-        return counter;
-      }
+var scoreOfString = function(s) {
+  let result = 0;
+  for (let i = 0; i < s.length; i++) {
+    if( s.charCodeAt(i) !== NaN && s.charCodeAt(i+1)){
+      result += Math.abs(s.charCodeAt(i) - s.charCodeAt(i+1));
     }
+}
+  return result;
 };
 
-const counter = createCounter(5);
-console.log(counter.increment()); // 6
-console.log(counter.reset()); // 5
-console.log(counter.decrement()); // 4
+console.log(scoreOfString('hello')); // 57
