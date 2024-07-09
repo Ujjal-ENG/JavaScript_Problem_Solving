@@ -1,7 +1,7 @@
 var findWordsContaining = function(words, x) {
     let result = [];
-    for(let word of words) {
-      if(word.includes(x)) result.push(word[0]);
+    for(let [word,ins] of words) {
+      if(word.includes(x)) result.push(ins[0]);
     }
     return result;
 };
