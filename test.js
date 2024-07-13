@@ -5,14 +5,16 @@ function duplicateBrackets(bracs){
     for(let i = 0; i < bracs.length; i++){
         if(bracs[i] === '('){
             stack.push(i);
-            console.log(peek(stack));
-        } else if(bracs[i] === ')'){
-            if(stack.length > 0){
-                result.push([stack.pop(), i]);
+        } else{
+            if(peek(bracs) === '('){
+                return true;
+            }
+            else {
+               console.log(peek(stack));
             }
         }
     }
-    return result;
+    return false;
 }
 
 function peek(arry){
