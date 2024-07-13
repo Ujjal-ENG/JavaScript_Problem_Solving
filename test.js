@@ -1,24 +1,26 @@
-function duplicateBrackets(bracs){
+function duplicateBrackets(exp){
     let stack = [];
-    let result = [];
-    
-    for(let i = 0; i < bracs.length; i++){
-        if(bracs[i] === '('){
-            stack.push(i);
-        } else{
-            if(peek(bracs) === '('){
-                return true;
-            }
-            else {
-               console.log(peek(stack));
+
+    for(let ch of exp){
+        if(ch === "("){
+            stack.push(ch);
+        }else{
+            if(ch === ")"){
+                if(stack[stack.length - 1] === ")"){
+                    return true;
+                }else{
+                    while(stack.length > 0 && stack[stack.length - 1] !== "("){
+                        stack.pop();
+                    }
+
+                }
             }
         }
     }
     return false;
 }
-
-function peek(arry){
-    return arry[arry.length - 1];
-}
-
-console.log(duplicateBrackets("(1+2)+((1+2))"));
+// Example usage:
+console.log(duplicateBrackets("(1+2)+((1+2))")); // Output: true
+console.log(duplicateBrackets("(1+2) + (3+4)")); // Output: false
+console.log(duplicateBrackets("((a + b))"));     // Output: true
+console.log(duplicateBrackets("(a + (b + c))")); // Output: false
