@@ -2,20 +2,20 @@ function duplicateBrackets(exp){
     let stack = [];
 
     for(let ch of exp){
-        if(ch === "("){
-            stack.push(ch);
+       if(ch === ")"){
+        if(stack[stack.length-1] ==="("){
+            return true;
         }else{
-            if(ch === ")"){
-                if(stack[stack.length - 1] === ")"){
-                    return true;
-                }else{
-                    while(stack.length > 0 && stack[stack.length - 1] !== "("){
-                        stack.pop();
-                    }
-                    return true;
-                }
+            while(stack.length > 0 && stack[stack.length-1] !=="("){
+                stack.pop();
+            }
+            if(stack.length > 0){
+                stack.pop();
             }
         }
+       }else{
+        stack.push(ch);
+       }
     }
     return false;
 }
