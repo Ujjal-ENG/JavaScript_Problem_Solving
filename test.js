@@ -12,7 +12,7 @@ function duplicateBrackets(exp){
                     while(stack.length > 0 && stack[stack.length - 1] !== "("){
                         stack.pop();
                     }
-
+                    return true;
                 }
             }
         }
