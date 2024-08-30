@@ -1,11 +1,11 @@
 function patternShowing(num) {
-    let c = 0;
     for (let i = 1; i <= num; i++) {
-        c++;
-        for (let j = 1; j <= i; j++) { 
-            console.log(c+'/n');
+        let line = '';
+        for (let j = 0; j < i; j++) {
+            line += i;
         }
+        console.log(line);
     }
-} 
+}
 
-console.log(patternShowing(4));
+patternShowing(4);
