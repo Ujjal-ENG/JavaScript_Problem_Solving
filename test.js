@@ -1,10 +1,17 @@
+
+
 function patternShowing(num) {
-    for (let i = num; i >=0; --i) {
-        let line = '';
-        for (let j = 0; j < i; j++) {
-            line += i;
+    let line = '*';
+    for (let i = 1; i <=num; i++) {
+        for (let j = 1; j <= i; j++){
+            if (i == 1) {
+                console.log('*');
+            }
+            else {
+                let star = (j * 2) + 1;
+                console.log('*'.repeat(star));
+            }
         }
-        console.log(line);
     }
 }
 
