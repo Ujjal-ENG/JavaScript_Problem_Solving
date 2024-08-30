@@ -1,8 +1,11 @@
-function findDuplicates(nums){
-    const ht = {};
-    for(let num of nums){
-        ht[num] = ht
+function patternShowing(num) {
+    let c = 0;
+    for (let i = 1; i <= num; i++) {
+        c++;
+        for (let j = 1; j <= i; j++) { 
+            console.log(c+'/n');
+        }
     }
-}
+} 
 
-console.log(findDuplicates([1, 2, 3, 4, 5, 2, 3])); // [2, 3]
+console.log(patternShowing(4));
