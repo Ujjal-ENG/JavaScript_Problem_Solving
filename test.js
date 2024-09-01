@@ -1,5 +1,3 @@
-
-
 function patternShowing(num) {
     let line = '*';
     for (let i = 1; i <=num; i++) {
